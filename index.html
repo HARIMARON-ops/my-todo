@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo — Elegant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 背景のグラデーション装飾 -->
+  <div class="bg-blob blob1"></div>
+  <div class="bg-blob blob2"></div>
+  <div class="bg-blob blob3"></div>
+
+  <main class="app">
+    <header class="app-header">
+      <h1>Today's Tasks</h1>
+      <p class="subtitle" id="today"></p>
+    </header>
+
+    <div class="input-area">
+      <input type="text" id="taskInput" placeholder="What needs to be done?" autocomplete="off">
+      <button id="addBtn" aria-label="追加">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="filter-tabs">
+      <button class="filter active" data-filter="all">すべて</button>
+      <button class="filter" data-filter="active">未完了</button>
+      <button class="filter" data-filter="completed">完了</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div class="empty-state" id="emptyState">
+      <div class="empty-icon">🌿</div>
+      <p>タスクはまだありません</p>
+    </div>
+
+    <footer class="app-footer">
+      <span id="count">0 items left</span>
+      <button id="clearBtn">完了を削除</button>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
